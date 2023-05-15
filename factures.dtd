@@ -1,3 +1,5 @@
+<!ENTITY euro  "&#8364;">
+<!ENTITY % values SYSTEM "valuesEnum.txt">
 <!ELEMENT factures (facture*)>
 <!ATTLIST factures 
 	rsets CDATA #REQUIRED
@@ -14,10 +16,12 @@
 	datefacture CDATA #REQUIRED 
 	type (devis|facture) #REQUIRED
 	idclient CDATA #REQUIRED
-	
 >
 <!ELEMENT client (destinataire,adr1,adr2,cp,ville)>
-<!ELEMENT destinataire (#PCDATA)>
+<!ELEMENT destinataire (nom,pnom,pnom?,pnom?)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT pnom (#PCDATA)>
+
 <!ELEMENT adr1 (#PCDATA)>
 <!ELEMENT adr2 (#PCDATA)>
 <!ELEMENT cp (#PCDATA)>
@@ -31,6 +35,8 @@
 <!ATTLIST surface 
 	unite (m2) #IMPLIED>
 <!ELEMENT phtByUnit (#PCDATA)>
+<!ATTLIST phtByUnit 
+	value (1.00|1.01|1.02|1.03) #IMPLIED>
 <!ATTLIST nbUnit 
 	typeUnit (HOUR|UNIT|HOURBYMETER2) #IMPLIED>
 <!ELEMENT nbUnit (#PCDATA)>

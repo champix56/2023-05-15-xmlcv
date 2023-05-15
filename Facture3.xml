@@ -3,7 +3,12 @@
 <factures rsets="eCO-nome" adr1ets="AV PIERRE GEORGES" adr2ets="" logourl="1.jpg" cpets="75015" villeets="Paris" dateeditionXML="2012-12-15">
 	<facture numfacture="f12" datefacture="" type="devis" idclient="123">
 		<client>
-			<destinataire>Alexandre DESORBAIX</destinataire>
+			<destinataire>
+				<nom>D&euro;SORBAIX</nom>
+				<pnom>alexandre</pnom>
+				<pnom>dominique</pnom>
+				<pnom>joël</pnom>
+			</destinataire>
 			<adr1>chemin de l'homme dormant</adr1>
 			<adr2/>
 			<cp>54230</cp>
