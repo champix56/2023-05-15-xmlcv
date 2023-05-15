@@ -1,0 +1,37 @@
+<!ELEMENT factures (facture*)>
+<!ATTLIST factures 
+	rsets CDATA #REQUIRED
+	logourl CDATA #IMPLIED
+	adr1ets CDATA #REQUIRED 
+	adr2ets CDATA #REQUIRED
+	cpets CDATA #REQUIRED
+	villeets CDATA #REQUIRED
+	dateeditionXML CDATA #REQUIRED>
+<!ELEMENT facture (client?,lignes)>
+<!ATTLIST facture
+	numfacture ID #REQUIRED
+	refdevis IDREF #IMPLIED
+	datefacture CDATA #REQUIRED 
+	type (devis|facture) #REQUIRED
+	idclient CDATA #REQUIRED
+	
+>
+<!ELEMENT client (destinataire,adr1,adr2,cp,ville)>
+<!ELEMENT destinataire (#PCDATA)>
+<!ELEMENT adr1 (#PCDATA)>
+<!ELEMENT adr2 (#PCDATA)>
+<!ELEMENT cp (#PCDATA)>
+<!ELEMENT ville (#PCDATA)>
+<!ELEMENT lignes (ligne+)>
+<!ELEMENT ligne ( (ref,designation,surface?,phtByUnit,nbUnit,stotligne)|info )>
+<!ELEMENT info (#PCDATA)>
+<!ELEMENT ref (#PCDATA)>
+<!ELEMENT designation (#PCDATA)>
+<!ELEMENT surface (#PCDATA)>
+<!ATTLIST surface 
+	unite (m2) #IMPLIED>
+<!ELEMENT phtByUnit (#PCDATA)>
+<!ATTLIST nbUnit 
+	typeUnit (HOUR|UNIT|HOURBYMETER2) #IMPLIED>
+<!ELEMENT nbUnit (#PCDATA)>
+<!ELEMENT stotligne (#PCDATA)>

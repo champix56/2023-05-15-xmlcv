@@ -1,6 +1,7 @@
-<?xml version="1.0"?>
-<factures rsets="â‚¬CO-nome" adr1ets="AV PIERRE GEORGES" adr2ets="" logourl="1.jpg" cpets="75015" villeets="Paris" dateeditionXML="2012-12-15" >
-	<facture numfacture="12" datefacture="2012-08-10" type="Devis" idclient="123">
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE factures SYSTEM "factures.dtd">
+<factures rsets="eCO-nome" adr1ets="AV PIERRE GEORGES" adr2ets="" logourl="1.jpg" cpets="75015" villeets="Paris" dateeditionXML="2012-12-15">
+	<facture numfacture="f12" datefacture="" type="devis" idclient="123">
 		<client>
 			<destinataire>Alexandre DESORBAIX</destinataire>
 			<adr1>chemin de l'homme dormant</adr1>
@@ -21,7 +22,7 @@
 			</ligne>
 			<ligne>
 				<ref>REF-2135</ref>
-				<designation>Peinture SOL forfait &lt;20mÂ² </designation>
+				<designation>Peinture SOL forfait &lt;20m² </designation>
 				<phtByUnit>8.95</phtByUnit>
 				<nbUnit typeUnit="UNIT">1.5</nbUnit>
 				<stotligne>13.425</stotligne>
@@ -35,7 +36,7 @@
 			</ligne>
 		</lignes>
 	</facture>
-	<facture numfacture="23" datefacture="2012-09-04" type="Facture" idclient="234">
+	<facture numfacture="f23" datefacture="2012-09-04" type="facture" idclient="234">
 		<lignes>
 			<ligne>
 				<ref>REF-2234</ref>
@@ -47,7 +48,7 @@
 			</ligne>
 		</lignes>
 	</facture>
-	<facture numfacture="11" refdevis="08" datefacture="2012-07-05" type="Facture" idclient="234">
+	<facture numfacture="f11" refdevis="f08" datefacture="2012-07-05" type="facture" idclient="234">
 		<lignes>
 			<ligne>
 				<ref>REF-2234</ref>
@@ -59,7 +60,7 @@
 			</ligne>
 		</lignes>
 	</facture>
-	<facture numfacture="08" datefacture="2013-07-04" type="Devis" idclient="234">
+	<facture numfacture="f08" datefacture="2013-07-04" type="devis" idclient="234">
 		<lignes>
 			<ligne>
 				<ref>REF-2234</ref>
@@ -71,7 +72,7 @@
 			</ligne>
 		</lignes>
 	</facture>
-	<facture numfacture="05" datefacture="2012-06-21" type="Facture" idclient="132">
+	<facture numfacture="f05" datefacture="2012-06-21" type="facture" idclient="132">
 		<lignes>
 			<ligne>
 				<ref>REF-2234</ref>
@@ -90,7 +91,7 @@
 			</ligne>
 			<ligne>
 				<ref>REF-2135-2</ref>
-				<designation>Peinture SOL forfait &gt;20mÂ² </designation>
+				<designation>Peinture SOL forfait &gt;20m² </designation>
 				<phtByUnit>6.95</phtByUnit>
 				<nbUnit typeUnit="UNIT">2.5</nbUnit>
 				<stotligne>17.375</stotligne>
