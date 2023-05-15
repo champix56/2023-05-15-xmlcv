@@ -1,10 +1,8 @@
+<?xml version="1.0"?>
 <factures rsets="€CO-nome" adr1ets="AV PIERRE GEORGES" adr2ets="" logourl="1.jpg" cpets="75015" villeets="Paris" dateeditionXML="2012-12-15" >
 	<facture numfacture="12" datefacture="2012-08-10" type="Devis" idclient="123">
 		<client>
-			<destinataire>
-				<prenom>Alexandre</prenom>
-				<nom>DESORBAIX</nom>
-			</destinataire>
+			<destinataire>Alexandre DESORBAIX</destinataire>
 			<adr1>chemin de l'homme dormant</adr1>
 			<adr2/>
 			<cp>54230</cp>
@@ -99,16 +97,4 @@
 			</ligne>
 		</lignes>
 	</facture>
-	<clients>
-		<unClient>
-			<destinataire>
-				<prenom>Alexandre</prenom>
-				<nom>DESORBAIX</nom>
-			</destinataire>
-			<adr1>chemin de l'homme dormant</adr1>
-			<adr2/>
-			<cp>54230</cp>
-			<ville>Nancy Lest</ville>
-		</unClient>
-	</clients>
 </factures>
