@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="ST_cp">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-8]\d{2}|9[1-6]|97[1-4])\d{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="CT_client">
+									<xs:sequence>
+										<xs:element name="destinataire"/>
+										<xs:element name="adr1"/>
+										<xs:element name="adr2"/>
+										<xs:element name="cp" type="ST_cp"/>
+										<xs:element name="ville"/>
+									</xs:sequence>
+								</xs:complexType>
+	<xs:element name="factures">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="facture" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="client" type="CT_client"/>
+							<xs:element name="lignes">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="ligne" maxOccurs="unbounded">
+											
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="rsets" type="xs:string"/>
+			<xs:attribute name="vileets" type="xs:string"/>
+			<xs:attribute name="cpets" type="ST_cp"/>
+			<xs:attribute name="adr2ets" type="xs:string"/>
+			<xs:attribute name="adr1ets" type="xs:string"/>
+			<xs:attribute name="dateeditionXML" type="xs:string"/>
+			<xs:attribute name="logourl" type="xs:anyURI" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
