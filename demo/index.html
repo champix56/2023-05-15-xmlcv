@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enter your title here</title>
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"
+    />
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <style type="text/css">
+            #main-wrapper{
+                display: flex;
+                height: 90vh;
+            }
+            #main-wrapper>*{
+              height: 100%;
+            }
+            #main-wrapper>div:nth-child(1)
+            {
+                background-color: blue;
+                color: white;
+                width: 22vw;
+                border-right: 1px solid white;
+            }
+            #main-wrapper>div:nth-child(2)
+            {
+                flex-grow: 1;
+            }
+
+    </style>
+   
+  </head>
+  <body>
+    <div id="header"></div>
+    <div id="main">
+      <div id="navbar">
+        <nav class="navbar navbar-inverse">
+          <a class="navbar-brand" href="#">Title</a>
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a id="load-button" href="#">load</a>
+            </li>
+            <li>
+              <a id="clear-button" href="#">clear</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="main-wrapper">
+        <div id="col-left"></div>
+        <div id="col-right"></div>
+      </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+      const nodeForResultInDocument=document.querySelector('#col-right')
+      const loaderEvents=()=>{
+          document.querySelector("#load-button").addEventListener('click',onloadbuttonclicked);
+          document.querySelector("#clear-button").addEventListener('click',clearContent);
+      }
+
+      document.addEventListener('DOMContentLoaded',loaderEvents)
+     function onloadbuttonclicked(evt){
+       const promiseXSL=fetch('tohtml.xsl').then(e=>e.text());
+       const promiseXML=fetch('facture3.xml').then(e=>e.text());
+       Promise.all([promiseXML,promiseXSL])
+         .then(retourDesPromises=>{
+             const domParser=new DOMParser();
+             const documentXML=domParser.parseFromString(retourDesPromises[0],'application/xml');
+             const documentXSL=domParser.parseFromString(retourDesPromises[1],'application/xml');
+             const xslProcerssor=new XSLTProcessor();
+
+             xslProcerssor.importStylesheet(documentXSL);
+             const resultOfTransformation=xslProcerssor.transformToDocument(documentXML);
+
+             //selection du noeud pour clear puis ajout
+             clearContent();
+             nodeForResultInDocument.appendChild(resultOfTransformation.body);
+         })
+     }
+     function clearContent(){
+        nodeForResultInDocument.innerHTML='';
+     }
+   </script>
+  </body>
+</html>
