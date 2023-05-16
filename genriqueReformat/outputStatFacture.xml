@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factureStat dateeditionXML="2023-05-16">
+	<devis idfacture="f12">
+		<nbArt>5</nbArt>
+		<nbLignes>4</nbLignes>
+		<avgLigne>14.08233333333333</avgLigne>
+	</devis>
+	<facture idfacture="f23">
+		<nbArt>0.5</nbArt>
+		<nbLignes>1</nbLignes>
+		<avgLigne>74.625</avgLigne>
+	</facture>
+	<facture idfacture="f11">
+		<nbArt>0.5</nbArt>
+		<nbLignes>1</nbLignes>
+		<avgLigne>24.873</avgLigne>
+	</facture>
+	<devis idfacture="f08">
+		<nbArt>0.5</nbArt>
+		<nbLignes>1</nbLignes>
+		<avgLigne>69.65</avgLigne>
+	</devis>
+	<facture idfacture="f05">
+		<nbArt>5</nbArt>
+		<nbLignes>3</nbLignes>
+		<avgLigne>32.975</avgLigne>
+	</facture>
+</factureStat>
