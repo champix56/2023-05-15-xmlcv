@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE factures SYSTEM "factures.dtd">
-<factures rsets="eCO-nome" adr1ets="AV PIERRE GEORGES" adr2ets="" logourl="1.jpg" cpets="75015" villeets="Paris" dateeditionXML="2012-12-15">
-	<facture numfacture="f12" datefacture="" type="devis" idclient="123">
+<?xml-stylesheet href="genDOCX-Monolithique.xslt" type="text/xsl"?>
+<factures rsets="eCO-nome" adr1ets="AV PIERRE GEORGES" adr2ets="" logourl="1.jpg" cpets="75015" villeets="Paris" dateeditionXML="2012-12-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="factures.xsd">
+	<facture numfacture="f12" datefacture="2023-12-01" type="devis" idclient="123">
 		<client>
 			<destinataire>
-				<nom>D&euro;SORBAIX</nom>
+				<nom>DeSORBAIX</nom>
 				<pnom>alexandre</pnom>
 				<pnom>dominique</pnom>
 				<pnom>joël</pnom>
@@ -42,6 +42,13 @@
 		</lignes>
 	</facture>
 	<facture numfacture="f23" datefacture="2012-09-04" type="facture" idclient="234">
+		<client>
+	<destinataire>text</destinataire>
+	<adr1>String</adr1>
+	<adr2>String</adr2>
+	<cp>10000</cp>
+	<ville>String</ville>
+</client>
 		<lignes>
 			<ligne>
 				<ref>REF-2234</ref>
@@ -54,6 +61,13 @@
 		</lignes>
 	</facture>
 	<facture numfacture="f11" refdevis="f08" datefacture="2012-07-05" type="facture" idclient="234">
+		<client>
+	<destinataire>text</destinataire>
+	<adr1>String</adr1>
+	<adr2>String</adr2>
+	<cp>10000</cp>
+	<ville>String</ville>
+</client>
 		<lignes>
 			<ligne>
 				<ref>REF-2234</ref>
@@ -66,6 +80,13 @@
 		</lignes>
 	</facture>
 	<facture numfacture="f08" datefacture="2013-07-04" type="devis" idclient="234">
+		<client>
+	<destinataire>text</destinataire>
+	<adr1>String</adr1>
+	<adr2>String</adr2>
+	<cp>10000</cp>
+	<ville>String</ville>
+</client>
 		<lignes>
 			<ligne>
 				<ref>REF-2234</ref>
@@ -78,6 +99,13 @@
 		</lignes>
 	</facture>
 	<facture numfacture="f05" datefacture="2012-06-21" type="facture" idclient="132">
+		<client>
+	<destinataire>text</destinataire>
+	<adr1>String</adr1>
+	<adr2>String</adr2>
+	<cp>10000</cp>
+	<ville>String</ville>
+</client>
 		<lignes>
 			<ligne>
 				<ref>REF-2234</ref>

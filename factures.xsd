@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="codesPostaux">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(((([1-8]\d)|(0[1-9])|(9[0-6]))\d)|97[1-4])\d{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- <!ELEMENT -->
+	<xs:element name="factures">
+		<!--<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>-->
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="facture" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="client">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="destinataire"/>
+										<xs:element name="adr1" type="xs:string"/>
+										<xs:element name="adr2" type="xs:string"/>
+										<xs:element name="cp" type="codesPostaux"/>
+										<xs:element name="ville" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="lignes"/>
+						</xs:sequence>
+						<xs:attribute name="numfacture" type="xs:ID"/>
+						<xs:attribute name="refdevis" type="xs:IDREF" use="optional"/>
+						<xs:attribute name="datefacture" type="xs:date"/>
+						<xs:attribute name="type">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="devis"/>
+									<xs:enumeration value="facture"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="idclient" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="rsets" type="xs:string"/>
+			<xs:attribute name="cpets" type="codesPostaux"></xs:attribute>
+			<xs:attribute name="villeets" type="xs:string"/>
+			<xs:attribute name="adr1ets" type="xs:string"/>
+			<xs:attribute name="adr2ets" type="xs:string"/>
+			<xs:attribute name="logourl" type="xs:anyURI"/>
+			<xs:attribute name="dateeditionXML" type="xs:date"/>
+			<!--eq. <!ATTLIST-->
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
